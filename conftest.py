@@ -18,6 +18,6 @@ def browser(browser_type):
     cfg = Config(browser_type).browser_type
     match cfg:
         case "chrome_browser":
-            return webdriver.Chrome()
+            yield webdriver.Chrome()
         case "firefox_browser":
-            return webdriver.Firefox()
+            yield webdriver.Firefox()
