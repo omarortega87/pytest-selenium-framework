@@ -19,7 +19,7 @@ class Config_execution:
         SUPPORTED_EXECUTORS = ['local', 'grid']
 
         if execution == None or execution.lower() not in SUPPORTED_EXECUTORS:
-            raise Exception(f'{execution} please select an option from the Supported Executors with the option --execution (supported browsers: {SUPPORTED_EXECUTORS})')
+            raise Exception(f'{execution} please select an option from the Supported Executors with the option --execution (supported executors: {SUPPORTED_EXECUTORS})')
 
 
         self.execution_type = {

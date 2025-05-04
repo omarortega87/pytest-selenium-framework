@@ -22,3 +22,27 @@ class AB_TESTING(BasePage):
             driver=self.driver,
             locator=locator
         )
+
+    @property
+    def checkboxes_link(self):
+        locator = Locator(by=By.LINK_TEXT, value="Checkboxes")
+        return BaseElement(
+            driver=self.driver,
+            locator=locator
+        )
+
+    @property
+    def first_checkbox(self):
+        locator = Locator(by=By.XPATH, value="//form[@id='checkboxes']/input[1]")
+        return BaseElement(
+            driver=self.driver,
+            locator=locator
+        )
+
+    @property
+    def second_checkbox(self):
+        locator = Locator(by=By.XPATH, value="//form[@id='checkboxes']/input[2]")
+        return BaseElement(
+            driver=self.driver,
+            locator=locator
+        )
